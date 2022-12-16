@@ -7,7 +7,7 @@ const ALLOWED_FM = ['shopify', 'bigcommerce', 'shopify_local'];
 const FALLBACK_FM = 'shopify';
 
 function withFrameworkConfig(defaultConfig = {}) {
-  let framework = defaultConfig?.framework?.name;
+  let framework = defaultConfig?.env?.framework;
 
   if (!framework) {
     throw new Error(
